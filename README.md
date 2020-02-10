@@ -1,2 +1,2 @@
 # restsharp_flurl_refit
-RestSharpe vs Flurl vs Refit
+RestSharp vs Flurl vs Refit
