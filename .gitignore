@@ -721,3 +721,4 @@ Desktop.ini
 # Backup folder for Package Reference Convert tool in Visual Studio 2017
 
 # End of https://www.gitignore.io/api/csharp,dotnetcore,aspnetcore,visualstudio,visualstudiocode,openframeworks+visualstudio
+.vscode/

@@ -40,5 +40,35 @@ namespace restsharp_flurl_refit.Restsharp
 
             return response.Data;
         }
+
+        public Pessoa Get(int id)
+        {
+            var request = new RestRequest("pessoa/{id}")
+            .AddUrlSegment("id", id);
+
+            var response = restClient.ExecuteAsGet<Pessoa>(request, "GET");
+
+            return response.Data;
+        }
+
+        public Pessoa Get(int id, string nome)
+        {
+            var request = new RestRequest("pessoa")
+            .AddParameter("id", id)
+            .AddParameter("nome", nome);
+
+            var response = restClient.ExecuteAsGet<Pessoa>(request, "GET");
+
+            return response.Data;
+        }
+
+        public Pessoa Post(Pessoa pessoa)
+        {
+            var request = new RestRequest("pessoa").AddJsonBody(pessoa);
+
+            var response = restClient.ExecuteAsPost<Pessoa>(request, "POST");
+
+            return response.Data;
+        }
     }
 }
